@@ -3,14 +3,16 @@
 using namespace std;
 
 int main() {
-    int k,n,w;cin>>k>>n>>w;
+    int n,m;cin>>n>>m;
     int c=0;
-    for(int i=1;i<=w;i++){
-        c+=i*k;
+    while(n!=m){
+        if(m>n){
+            if(m%2==0)m/=2;
+            else m++;
+        }
+        else m++;
+        c++;
     }
-    if(c<n)cout<<0<<endl;
-    else{
-        cout<<c-n<<endl;
-    }
+    cout<<c<<endl;
     return 0;
 }
